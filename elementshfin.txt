@@ -1,0 +1,142 @@
+#!/bin/bash
+
+PSQL="psql --username=freecodecamp --dbname=periodic_table --no-align --tuples-only -c"
+
+if [[ -z $1 ]]
+then
+
+echo -e "Please provide an element as an argument."
+
+elif [[ $1 == 1 || $1 = "H" || $1 = "Hydrogen" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 1;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 1;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 1;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 1;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 1;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 1;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 1;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 2 || $1 = "He" || $1 = "Helium" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 2;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 2;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 2;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 2;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 2;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 2;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 2;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 3 || $1 = "Li" || $1 = "Lithium" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 3;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 3;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 3;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 3;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 3;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 3;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 3;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 4 || $1 = "Be" || $1 = "Beryllium" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 4;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 4;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 4;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 4;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 4;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 4;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 4;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 5 || $1 = "B" || $1 = "Boron" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 5;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 5;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 5;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 5;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 5;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 5;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 5;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+elif [[ $1 == 6 || $1 = "C" || $1 = "Carbon" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 6;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 6;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 6;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 6;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 6;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 6;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 6;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 7 || $1 = "N" || $1 = "Nitrogen" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 7;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 7;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 7;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 7;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 7;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 7;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 7;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 8 || $1 = "O" || $1 = "Oxygen" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 8;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 8;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 8;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 8;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 8;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 8;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 8;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 9 || $1 = "F" || $1 = "Fluorine" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 9;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 9;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 9;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 9;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 9;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 9;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 9;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+elif [[ $1 == 10 || $1 = "Ne" || $1 = "Neon" ]]
+then
+ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE atomic_number = 10;")
+NAME=$($PSQL "SELECT name FROM elements WHERE atomic_number = 10;")
+SYMBOL=$($PSQL "SELECT symbol FROM elements WHERE atomic_number = 10;")
+TYPE=$($PSQL "SELECT type FROM types FULL JOIN properties USING(type_id) WHERE atomic_number = 10;")
+ATOMIC_MASS=$($PSQL "SELECT atomic_mass FROM properties WHERE atomic_number = 10;")
+MELTING_POINT_CELSIUS=$($PSQL "SELECT melting_point_celsius FROM properties WHERE atomic_number = 10;")
+BOILING_POINT_CELSIUS=$($PSQL "SELECT boiling_point_celsius FROM properties WHERE atomic_number = 10;")
+#echo -e "I could not find that element in the database."
+
+echo -e "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT_CELSIUS celsius and a boiling point of $BOILING_POINT_CELSIUS celsius."
+
+else 
+echo -e "I could not find that element in the database."
+
+fi
